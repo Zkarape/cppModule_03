@@ -1,7 +1,8 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(/* args */)
+DiamondTrap::DiamondTrap(std::string &name) : ClapTrap(name)
 {
+    
 }
 
 DiamondTrap::~DiamondTrap()
