@@ -23,28 +23,15 @@ FragTrap::FragTrap(const FragTrap &copy):ClapTrap(copy)
 
 FragTrap &FragTrap::operator=(const FragTrap &assign)
 {
-	std::cout << "FragTrap Assignment operator called" << std::endl;
-	_name = assign._name;
-	_hitPoints = assign._hitPoints;
-	_energyPoints = assign._energyPoints;
-	_AttackDamage = assign._AttackDamage;
+	if (this != &assign)
+	{
+		std::cout << "FragTrap Assignment operator called" << std::endl;
+		_name = assign._name;
+		_hitPoints = assign._hitPoints;
+		_energyPoints = assign._energyPoints;
+		_AttackDamage = assign._AttackDamage;
+	}
 	return (*this);
-}
-
-const std::string &FragTrap::getName() const
-{
-	return (_name);
-}
-
-const int &FragTrap::getAttackDamage() const
-{
-	return (_AttackDamage);
-}
-
-void FragTrap::printPointInfo() const
-{
-	std::cout << this->_name << "'s hit points are " << this->_hitPoints << std::endl;
-	std::cout << this->_name << "'s energy points are " << this->_energyPoints << std::endl;
 }
 
 void FragTrap::highFivesGuys()

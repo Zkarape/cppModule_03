@@ -7,6 +7,5 @@ int main()
 
     a.attack(b.getName());
     b.takeDamage(a.getAttackDamage());
-    b.beRepaired(10);
-    b.printHitPoint();
+    a.printPointInfo();
 }
