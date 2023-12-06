@@ -22,7 +22,6 @@ public:
     const std::string &getName() const;
     const unsigned int &getAttackDamage() const;
     void printPointInfo() const;
-
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
